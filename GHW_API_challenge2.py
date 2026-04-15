@@ -23,9 +23,10 @@ async def main():
     #Step 2 Ends-----------------------
 
     #Step 3
+    question = input("Enter your question: ")
     response = await client.add_message(
         thread_id="92205522-339e-4219-b37a-4f71d73502b6",
-        content="say Hello World",
+        content=question,
         stream=False
     )
     print(f"Assistant: {response.content}")
